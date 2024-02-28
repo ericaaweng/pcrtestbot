@@ -16,10 +16,29 @@ class RapidTestOrder {
        }
        aReturn.push("What type of milk do you want in your drink?") 
        aReturn.push("We have Oat and Almond milk!");
-       this.stateCur = this.OrderState.RESERVING;
+       this.stateCur = this.OrderState.SECOND;
        return aReturn;
       },
 
+      SECOND: () => {
+        let aReturn = [];
+        this.isDone = false;
+       
+         aReturn.push("How about you try our Cheese Danish?")
+        
+        this.stateCur = this.OrderState.THIRD;
+        return aReturn;
+      },
+
+      THIRD: () => {
+        let aReturn = [];
+        this.isDone = false;
+       
+         aReturn.push("Would you like a Bagel then?")
+        
+        this.stateCur = this.OrderState.RESERVING;
+        return aReturn;
+      },
 
       RESERVING: (sInput) => {
         let aReturn = [];

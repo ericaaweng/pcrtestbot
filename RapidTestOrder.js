@@ -12,7 +12,8 @@ class RapidTestOrder {
       SIZE: (sInput) =>{
        let aReturn = [];
        this.isDone = false;
-       if (sInput.toLowerCase().startsWith('s')){
+       if (sInput.toLowerCase().startsWith('s'))
+       if (sInput.toLowerCase().startsWith('r')){
         aReturn.push("Sounds good!")
        }
        aReturn.push("What type of milk do you want in your drink?") 

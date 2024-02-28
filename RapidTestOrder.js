@@ -5,6 +5,7 @@ class RapidTestOrder {
         let aReturn = [];
         aReturn.push("Welcome to Erica's Cafe and CO.");
         aReturn.push("What size latte would you like on this brew-tiful day?");
+        aReturn.push("Small (8oz) or Regular (12oz)");
         this.stateCur = this.OrderState.SIZE;
         return aReturn;
       },

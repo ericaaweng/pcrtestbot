@@ -12,10 +12,10 @@ class RapidTestOrder {
         let aReturn = [];
         this.isDone = true;
         if (sInput.toLowerCase().startsWith('y')) {
-          aReturn.push(`Your rapid test is reserved under the phone number ${this.sFrom}`);
+          aReturn.push(`Your wonderful baked goods are reserved under the phone number ${this.sFrom}`);
           let d = new Date();
           d.setMinutes(d.getMinutes() + 120);
-          aReturn.push(`Please pick it up at 123 Tidy St., Acton before ${d.toTimeString()}`);
+          aReturn.push(`Please pick it up at 225 Markham Road, Ontario before ${d.toTimeString()}`);
         } else {
           aReturn.push("Thanks for trying our reservation system");
           aReturn.push("Maybe next time")

@@ -3,11 +3,24 @@ class RapidTestOrder {
     this.OrderState = {
       WELCOMING: () => {
         let aReturn = [];
-        this.stateCur = this.OrderState.RESERVING;
-        aReturn.push("Welcome to Erica's Cafe Markham, Ontario.");
-        aReturn.push("Would you like reserve baked goods?");
+        aReturn.push("Welcome to Erica's Cafe & CO.");
+        aReturn.push("What size latte would you like on this brew-tiful day?");
+        this.stateCur = this.OrderState.SIZE;
         return aReturn;
       },
+      SIZE: (sInput) =>{
+       let aReturn = [];
+       this.isDone = false;
+       if (sInput.toLowerCase().startsWith('s')){
+        aReturn.push("Sounds good!")
+       }
+       aReturn.push("What type of milk do you want in your drink?") 
+       aReturn.push("We have Oat and Almond milk!");
+       this.stateCur = this.OrderState.RESERVING;
+       return aReturn;
+      },
+
+
       RESERVING: (sInput) => {
         let aReturn = [];
         this.isDone = true;
@@ -17,8 +30,8 @@ class RapidTestOrder {
           d.setMinutes(d.getMinutes() + 120);
           aReturn.push(`Please pick it up at 225 Markham Road, Ontario before ${d.toTimeString()}`);
         } else {
-          aReturn.push("Thanks for trying our reservation system");
-          aReturn.push("Maybe next time")
+          aReturn.push("Thanks for trying our ordering service");
+          aReturn.push("Have a brew-tiful day!")
         }
         return aReturn;
       }

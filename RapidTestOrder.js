@@ -34,7 +34,7 @@ class RapidTestOrder {
         let aReturn = [];
         this.isDone = false;
        
-         aReturn.push("Would you like a Bagel to pair with your drink?")
+         aReturn.push("Would you like a Bagel to pair with your drink for $1.00 add-on?")
         
         this.stateCur = this.OrderState.RESERVING;
         return aReturn;
